@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+websockets
+pyqt6
+cryptography
+qasync
