@@ -209,22 +209,6 @@ DNA-Bridge/
 └── dna-bridge.spec   # PyInstaller spec
 ```
 
----
-
-## 🗺️ Roadmap
-
-- [x] Text clipboard sync
-- [x] Rich text & image sync
-- [x] File & folder sync
-- [x] AES-128-CBC + HMAC-SHA256 encryption
-- [x] 6-character pairing codes
-- [ ] macOS & Linux clients
-- [ ] Mobile companion app
-- [ ] Self-hosted server installer (Docker)
-- [ ] Multi-device rooms (3+ computers)
-
----
-
 ## 🤝 Contributing
 
 Contributions are welcome! Please open an issue first to discuss what you'd like to change.
