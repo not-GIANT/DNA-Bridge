@@ -208,7 +208,6 @@ DNA-Bridge/
 ├── requirements-dev.txt
 └── dna-bridge.spec   # PyInstaller spec
 ```
-- [ ] Multi-device rooms (3+ computers)
 
 ## 📄 License
 
@@ -218,14 +217,12 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <div align="center">
 
+<img src="https://raw.githubusercontent.com/not-GIANT/DNA-Bridge/main/client.png" alt="DNA Bridge Icon" width="80" height="80"/>
+
+<br/>
+
 Made with ❤️ by [not-GIANT](https://github.com/not-GIANT)
 
-<a href="https://x.com/giant_notop?s=11">
-  <img src="https://img.shields.io/badge/Follow%20on%20𝕏-000000?style=for-the-badge&logo=x&logoColor=white" alt="X/Twitter"/>
-</a>
-
-<br/><br/>
-
-<sub>⭐ Star this repo if DNA Bridge saves you time!</sub>
+⭐ Star this repo if DNA Bridge saves you time!
 
 </div>
