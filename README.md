@@ -223,6 +223,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Made with ❤️ by [not-GIANT](https://github.com/not-GIANT)
 
-⭐ Star this repo if DNA Bridge saves you time!
+⭐ Star this repo if DNA Bridge saved you time!
 
 </div>
