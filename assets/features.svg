@@ -4,75 +4,54 @@
       <stop offset="0%" style="stop-color:#0d1117"/>
       <stop offset="100%" style="stop-color:#0d1117"/>
     </linearGradient>
-    <filter id="cardGlow">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
-      <feOffset dx="0" dy="2" result="offsetBlur"/>
-      <feFlood flood-color="#38bdf8" flood-opacity="0.2" result="color"/>
-      <feComposite in="color" in2="offsetBlur" operator="in" result="colorBlur"/>
-      <feMerge>
-        <feMergeNode in="colorBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
     <clipPath id="c2"><rect width="900" height="120" rx="10"/></clipPath>
   </defs>
 
   <g clip-path="url(#c2)">
     <rect width="900" height="120" fill="url(#bg2)"/>
 
-    <!-- Card 1: Real-Time Sync -->
+    <!-- Card 1: Real-Time Sync  x=10, w=210, center=115 -->
     <g>
-      <rect x="10" y="10" width="188" height="100" rx="10" fill="#0f1f2f" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4">
+      <rect x="10" y="10" width="210" height="100" rx="10" fill="#0f1f2f" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4">
         <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="3s" repeatCount="indefinite"/>
       </rect>
-      <text x="104" y="42" font-family="Arial" font-size="22" text-anchor="middle">⚡</text>
-      <text x="104" y="65" font-family="'Segoe UI', Arial" font-size="13" font-weight="700" fill="#f8fafc" text-anchor="middle">Real-Time Sync</text>
-      <text x="104" y="81" font-family="'Segoe UI', Arial" font-size="10" fill="#64748b" text-anchor="middle">WebSocket instant</text>
-      <text x="104" y="94" font-family="'Segoe UI', Arial" font-size="10" fill="#64748b" text-anchor="middle">clipboard updates</text>
+      <text x="115" y="42" font-family="Arial" font-size="22" text-anchor="middle">⚡</text>
+      <text x="115" y="65" font-family="'Segoe UI', Arial" font-size="13" font-weight="700" fill="#f8fafc" text-anchor="middle">Real-Time Sync</text>
+      <text x="115" y="81" font-family="'Segoe UI', Arial" font-size="10" fill="#64748b" text-anchor="middle">WebSocket instant</text>
+      <text x="115" y="94" font-family="'Segoe UI', Arial" font-size="10" fill="#64748b" text-anchor="middle">clipboard updates</text>
     </g>
 
-    <!-- Card 2: Encryption -->
+    <!-- Card 2: Encryption  x=230, w=210, center=335 -->
     <g>
-      <rect x="208" y="10" width="188" height="100" rx="10" fill="#0f1f2f" stroke="#a78bfa" stroke-width="1" stroke-opacity="0.4">
+      <rect x="230" y="10" width="210" height="100" rx="10" fill="#0f1f2f" stroke="#a78bfa" stroke-width="1" stroke-opacity="0.4">
         <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="3s" begin="0.5s" repeatCount="indefinite"/>
       </rect>
-      <text x="302" y="42" font-family="Arial" font-size="22" text-anchor="middle">🔐</text>
-      <text x="302" y="65" font-family="'Segoe UI', Arial" font-size="13" font-weight="700" fill="#f8fafc" text-anchor="middle">E2E Encrypted</text>
-      <text x="302" y="81" font-family="'Segoe UI', Arial" font-size="10" fill="#64748b" text-anchor="middle">AES-128-CBC +</text>
-      <text x="302" y="94" font-family="'Segoe UI', Arial" font-size="10" fill="#64748b" text-anchor="middle">HMAC-SHA256</text>
+      <text x="335" y="42" font-family="Arial" font-size="22" text-anchor="middle">🔐</text>
+      <text x="335" y="65" font-family="'Segoe UI', Arial" font-size="13" font-weight="700" fill="#f8fafc" text-anchor="middle">E2E Encrypted</text>
+      <text x="335" y="81" font-family="'Segoe UI', Arial" font-size="10" fill="#64748b" text-anchor="middle">AES-128-CBC +</text>
+      <text x="335" y="94" font-family="'Segoe UI', Arial" font-size="10" fill="#64748b" text-anchor="middle">HMAC-SHA256</text>
     </g>
 
-    <!-- Card 3: Rich Content -->
+    <!-- Card 3: Rich Content  x=450, w=210, center=555 -->
     <g>
-      <rect x="406" y="10" width="188" height="100" rx="10" fill="#0f1f2f" stroke="#22c55e" stroke-width="1" stroke-opacity="0.4">
+      <rect x="450" y="10" width="210" height="100" rx="10" fill="#0f1f2f" stroke="#22c55e" stroke-width="1" stroke-opacity="0.4">
         <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="3s" begin="1s" repeatCount="indefinite"/>
       </rect>
-      <text x="500" y="42" font-family="Arial" font-size="22" text-anchor="middle">📋</text>
-      <text x="500" y="65" font-family="'Segoe UI', Arial" font-size="13" font-weight="700" fill="#f8fafc" text-anchor="middle">Rich Content</text>
-      <text x="500" y="81" font-family="'Segoe UI', Arial" font-size="10" fill="#64748b" text-anchor="middle">Text, images &amp; files</text>
-      <text x="500" y="94" font-family="'Segoe UI', Arial" font-size="10" fill="#64748b" text-anchor="middle">across all devices</text>
+      <text x="555" y="42" font-family="Arial" font-size="22" text-anchor="middle">📋</text>
+      <text x="555" y="65" font-family="'Segoe UI', Arial" font-size="13" font-weight="700" fill="#f8fafc" text-anchor="middle">Rich Content</text>
+      <text x="555" y="81" font-family="'Segoe UI', Arial" font-size="10" fill="#64748b" text-anchor="middle">Text, images &amp; files</text>
+      <text x="555" y="94" font-family="'Segoe UI', Arial" font-size="10" fill="#64748b" text-anchor="middle">across all devices</text>
     </g>
 
-    <!-- Card 4: Easy Pairing -->
+    <!-- Card 4: Easy Pairing  x=670, w=220, center=780 -->
     <g>
-      <rect x="604" y="10" width="188" height="100" rx="10" fill="#0f1f2f" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.4">
+      <rect x="670" y="10" width="220" height="100" rx="10" fill="#0f1f2f" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.4">
         <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="3s" begin="1.5s" repeatCount="indefinite"/>
       </rect>
-      <text x="698" y="42" font-family="Arial" font-size="22" text-anchor="middle">🔗</text>
-      <text x="698" y="65" font-family="'Segoe UI', Arial" font-size="13" font-weight="700" fill="#f8fafc" text-anchor="middle">Easy Pairing</text>
-      <text x="698" y="81" font-family="'Segoe UI', Arial" font-size="10" fill="#64748b" text-anchor="middle">6-character code</text>
-      <text x="698" y="94" font-family="'Segoe UI', Arial" font-size="10" fill="#64748b" text-anchor="middle">instant device link</text>
-    </g>
-
-    <!-- Card 5: System Tray -->
-    <g>
-      <rect x="702" y="10" width="188" height="100" rx="10" fill="#0f1f2f" stroke="#f87171" stroke-width="1" stroke-opacity="0.4">
-        <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="3s" begin="2s" repeatCount="indefinite"/>
-      </rect>
-      <text x="796" y="42" font-family="Arial" font-size="22" text-anchor="middle">🖥️</text>
-      <text x="796" y="65" font-family="'Segoe UI', Arial" font-size="13" font-weight="700" fill="#f8fafc" text-anchor="middle">System Tray</text>
-      <text x="796" y="81" font-family="'Segoe UI', Arial" font-size="10" fill="#64748b" text-anchor="middle">Runs silently in</text>
-      <text x="796" y="94" font-family="'Segoe UI', Arial" font-size="10" fill="#64748b" text-anchor="middle">background</text>
+      <text x="780" y="42" font-family="Arial" font-size="22" text-anchor="middle">🔗</text>
+      <text x="780" y="65" font-family="'Segoe UI', Arial" font-size="13" font-weight="700" fill="#f8fafc" text-anchor="middle">Easy Pairing</text>
+      <text x="780" y="81" font-family="'Segoe UI', Arial" font-size="10" fill="#64748b" text-anchor="middle">6-character code</text>
+      <text x="780" y="94" font-family="'Segoe UI', Arial" font-size="10" fill="#64748b" text-anchor="middle">instant device link</text>
     </g>
   </g>
 </svg>
