@@ -4,3 +4,5 @@ websockets
 pyqt6
 cryptography
 qasync
+certifi
+zeroconf
