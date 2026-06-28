@@ -208,6 +208,7 @@ DNA-Bridge/
 ├── requirements-dev.txt
 └── dna-bridge.spec   # PyInstaller spec
 ```
+- [ ] Multi-device rooms (3+ computers)
 
 ## 📄 License
 
