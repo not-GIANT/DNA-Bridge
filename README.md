@@ -52,7 +52,6 @@
 | 🔐 **End-to-End Encryption** | AES-128-CBC + HMAC-SHA256 — the relay server never sees your data |
 | 📋 **Rich Content Support** | Sync plain text, formatted rich text, images, and entire file/folder trees |
 | 🔗 **One-Code Pairing** | Connect any two devices with a simple 6-character code — no accounts needed |
-| 🖥️ **System Tray** | Sits quietly in your taskbar; green icon = connected, red = disconnected |
 | 🌐 **Flexible Networking** | Works over the internet or on a local LAN — you choose |
 
 ---
@@ -60,17 +59,18 @@
 ## 📸 Screenshots
 
 <div align="center">
-
-### Client Interface
-
-<img src="https://raw.githubusercontent.com/not-GIANT/DNA-Bridge/main/screenshots/client.png" alt="DNA Bridge Client" width="70%" style="border-radius: 12px; border: 1px solid #1e3a4a;"/>
-
-<br/><br/>
-
-### Server Dashboard
-
-<img src="https://raw.githubusercontent.com/not-GIANT/DNA-Bridge/main/screenshots/server.png" alt="DNA Bridge Server" width="70%" style="border-radius: 12px; border: 1px solid #1e3a4a;"/>
-
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <b>Client Interface</b><br/><br/>
+      <img src="https://raw.githubusercontent.com/not-GIANT/DNA-Bridge/main/screenshots/client.png" alt="DNA Bridge Client" width="100%"/>
+    </td>
+    <td align="center" width="50%">
+      <b>Server Dashboard</b><br/><br/>
+      <img src="https://raw.githubusercontent.com/not-GIANT/DNA-Bridge/main/screenshots/server.png" alt="DNA Bridge Server" width="100%"/>
+    </td>
+  </tr>
+</table>
 </div>
 
 ---
