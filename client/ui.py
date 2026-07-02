@@ -1,5 +1,6 @@
 import asyncio
 import os
+import sys
 import logging
 from datetime import datetime
 from qasync import asyncSlot
@@ -72,7 +73,7 @@ class AboutDialog(QDialog):
         title_lbl.setAlignment(Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(title_lbl)
         
-        version_lbl = QLabel("Version 3.2")
+        version_lbl = QLabel("Version 4.0")
         version_lbl.setStyleSheet("color: #888; font-size: 11px;")
         version_lbl.setAlignment(Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(version_lbl)
@@ -91,7 +92,7 @@ class AboutDialog(QDialog):
         giant_lbl.setStyleSheet("font-size: 18px; font-weight: bold; color: white;")
         giant_lbl.setAlignment(Qt.AlignmentFlag.AlignCenter)
         
-        tagline = QLabel("All hail the afternoon supervisor.")
+        tagline = QLabel("Built by a human on planet Earth.")
         tagline.setStyleSheet("font-style: italic; color: #aaa; margin-top: 2px; font-size: 11px;")
         tagline.setAlignment(Qt.AlignmentFlag.AlignCenter)
         
@@ -391,14 +392,24 @@ class ClientMainWindow(QMainWindow):
         self.server_ip = server_ip
         self.notification_mode = notification_mode
         self.plain_text_only = plain_text_only
-        self.setWindowTitle("DNA Bridge")
+        self.setWindowTitle("DNA Bridge Client v4.0")
         self.setFixedSize(420, 680)
+        icon_path = self._resolve_icon_path("client.png")
+        if os.path.exists(icon_path):
+            self.setWindowIcon(QIcon(icon_path))
         
         self.init_ui()
         self.apply_styles()
         
         # Always default to System Logs tab on startup (Index 0 now)
         self.tabs.setCurrentIndex(0)
+
+    def _resolve_icon_path(self, filename: str) -> str:
+        """Return the path to an icon file, handling both source and PyInstaller builds."""
+        if getattr(sys, 'frozen', False) and hasattr(sys, '_MEIPASS'):
+            return os.path.join(sys._MEIPASS, filename)
+        project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        return os.path.join(project_root, filename)
 
     def init_ui(self):
         central = QWidget()
@@ -644,7 +655,7 @@ class ClientMainWindow(QMainWindow):
                 border: none;
                 color: #00ff00;
                 font-family: 'Consolas', monospace;
-                font-size: 11px;
+                font-size: 10px;
             }
             QListWidget {
                 background-color: transparent;

@@ -166,7 +166,7 @@ class AboutDialog(QDialog):
         title_lbl.setObjectName("title_lbl")
         title_lbl.setAlignment(Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(title_lbl)
-        version_lbl = QLabel("Version 3.2")
+        version_lbl = QLabel("Version 4.0")
         version_lbl.setStyleSheet("color: #888; font-size: 11px;")
         version_lbl.setAlignment(Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(version_lbl)
@@ -174,7 +174,7 @@ class AboutDialog(QDialog):
         card_layout = QVBoxLayout(card); card_layout.setSpacing(5)
         dev_title = QLabel("DEVELOPED BY"); dev_title.setObjectName("section_lbl"); dev_title.setAlignment(Qt.AlignmentFlag.AlignCenter)
         giant_lbl = QLabel("GIANT"); giant_lbl.setStyleSheet("font-size: 18px; font-weight: bold; color: white;"); giant_lbl.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        tagline = QLabel("All hail the afternoon supervisor."); tagline.setStyleSheet("font-style: italic; color: #aaa; margin-top: 2px; font-size: 11px;"); tagline.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        tagline = QLabel("Built by a human on Planet Earth."); tagline.setStyleSheet("font-style: italic; color: #aaa; margin-top: 2px; font-size: 11px;"); tagline.setAlignment(Qt.AlignmentFlag.AlignCenter)
         card_layout.addWidget(dev_title); card_layout.addWidget(giant_lbl); card_layout.addWidget(tagline); card_layout.addSpacing(5)
         feat_title = QLabel("KEY FEATURES"); feat_title.setObjectName("section_lbl"); feat_title.setAlignment(Qt.AlignmentFlag.AlignCenter); card_layout.addWidget(feat_title)
         
@@ -228,11 +228,21 @@ class ServerMainWindow(QMainWindow):
         for ln in ["uvicorn", "fastapi", "websockets"]:
             l = logging.getLogger(ln); l.addHandler(self.log_handler); l.setLevel(logging.INFO); l.propagate = False
         
-        self.setWindowTitle("DNA Bridge - Relay Server")
+        self.setWindowTitle("DNA Bridge Server v4.0")
         self.setFixedSize(420, 680)
+        icon_path = self._resolve_icon_path("server.png")
+        if os.path.exists(icon_path):
+            self.setWindowIcon(QIcon(icon_path))
         self.init_ui()
         self.apply_styles()
         self.tabs.setCurrentIndex(0) # Default to Logs (Index 0)
+
+    def _resolve_icon_path(self, filename: str) -> str:
+        """Return the path to an icon file, handling both source and PyInstaller builds."""
+        if getattr(sys, 'frozen', False) and hasattr(sys, '_MEIPASS'):
+            return os.path.join(sys._MEIPASS, filename)
+        project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        return os.path.join(project_root, filename)
 
     def init_ui(self):
         central = QWidget(); self.main_layout = QVBoxLayout(central)
@@ -334,7 +344,7 @@ class ServerMainWindow(QMainWindow):
             QTabWidget::pane { border: 1px solid #2d2d2d; border-radius: 8px; background-color: #161616; top: -1px; }
             QTabBar::tab { background-color: transparent; color: #666; padding: 8px 15px; font-weight: bold; font-size: 11px; }
             QTabBar::tab:selected { color: #3a86ff; border-bottom: 2px solid #3a86ff; }
-            QPlainTextEdit { background-color: #0c0c0c; border: none; color: #00ff00; font-family: 'Consolas', monospace; font-size: 11px; }
+            QPlainTextEdit { background-color: #0c0c0c; border: none; color: #00ff00; font-family: 'Consolas', monospace; font-size: 10px; }
             QScrollBar:vertical { border: none; background: transparent; width: 6px; }
             QScrollBar::handle:vertical { background: #333; border-radius: 3px; min-height: 20px; }
         """)

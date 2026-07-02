@@ -35,6 +35,8 @@ client_hidden = ws_hidden + ws_extra_hidden + crypto_hidden + ['qasync', 'PyQt6.
 client_datas = ws_datas + crypto_datas
 if os.path.exists('config.json'):
     client_datas.append(('config.json', '.'))
+if os.path.exists('client.png'):
+    client_datas.append(('client.png', '.'))
 
 client_binaries = ws_binaries + crypto_binaries
 qt_excludes = ['PySide6', 'PyQt5', 'PySide2', 'matplotlib', 'tkinter']
@@ -63,6 +65,8 @@ u_d, u_b, u_h = collect_pkg('uvicorn')
 server_datas = ws_datas + crypto_datas + f_d + u_d
 server_binaries = ws_binaries + crypto_binaries + f_b + u_b
 server_hidden += f_h + u_h
+if os.path.exists('server.png'):
+    server_datas.append(('server.png', '.'))
 
 # Include cloudflared.exe if present
 if os.path.exists('cloudflared.exe'):
