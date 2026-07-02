@@ -194,21 +194,6 @@ The resulting executable has no external dependencies — distribute it directly
 
 ---
 
-## 📁 Project Structure
-
-```
-DNA-Bridge/
-├── client/           # PyQt6 desktop client
-│   └── app.py
-├── server/           # FastAPI relay server
-│   └── main.py
-├── shared/           # Shared crypto & protocol
-├── tests/            # Test suite
-├── requirements.txt
-├── requirements-dev.txt
-└── dna-bridge.spec   # PyInstaller spec
-```
-
 ## 📄 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
